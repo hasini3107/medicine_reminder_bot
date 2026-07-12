@@ -1,0 +1,51 @@
+/* ============================================================
+   static/css/variables.css — Design System Tokens
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3347c7;
+    --primary-light: #eef1fd;
+    --success: #2ec4b6;
+    --success-light: #e8faf8;
+    --warning: #f77f00;
+    --warning-light: #fff4e6;
+    --danger: #e63946;
+    --danger-light: #fdecea;
+    --purple: #7b2d8b;
+    --purple-light: #f5eaf7;
+
+    --bg: #f0f2f8;
+    --sidebar-bg: #ffffff;
+    --card-bg: #ffffff;
+    --topbar-bg: #ffffff;
+
+    --text-primary: #1a1d3b;
+    --text-secondary: #5a607f;
+    --text-muted: #9ea5c1;
+    --border: #e4e7f0;
+
+    --sidebar-width: 240px;
+    --topbar-h: 64px;
+    --radius: 14px;
+    --shadow: 0 2px 12px rgba(67, 97, 238, 0.08);
+    --shadow-lg: 0 8px 32px rgba(67, 97, 238, 0.14);
+
+    --font: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+    --bg: #0f1021;
+    --sidebar-bg: #161830;
+    --card-bg: #1c1f38;
+    --topbar-bg: #161830;
+    --text-primary: #e8eaf6;
+    --text-secondary: #9ea5c1;
+    --text-muted: #5a607f;
+    --border: #282c4a;
+    --shadow: 0 2px 12px rgba(0,0,0,0.3);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+    --primary-light: #1a2060;
+}

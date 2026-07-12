@@ -1,0 +1,54 @@
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-icon"><i class="fa-solid fa-pills"></i></div>
+        <div class="brand-text">
+            <span class="brand-name">MediAssist</span>
+            <span class="brand-sub">Medicine Reminder</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" id="nav-dashboard" onclick="showPage('dashboard', this)">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-medicines" onclick="showPage('medicines', this)">
+            <i class="fa-solid fa-capsules"></i>
+            <span>My Medicines</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-reminders" onclick="showPage('reminders', this)">
+            <i class="fa-solid fa-bell"></i>
+            <span>Reminders</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-chatbot" onclick="showPage('chatbot', this)">
+            <i class="fa-solid fa-robot"></i>
+            <span>Medicine Assistant</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-reports" onclick="showPage('reports', this)">
+            <i class="fa-solid fa-chart-bar"></i>
+            <span>Reports</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-profile" onclick="showPage('profile', this)">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-settings" onclick="showPage('settings', this)">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="need-help-card">
+            <div class="help-icon"><i class="fa-solid fa-headset"></i></div>
+            <p>Need Help?</p>
+            <span>Chat with our AI assistant for medicine-related questions and info.</span>
+            <button onclick="showPage('chatbot', document.getElementById('nav-chatbot'))">Chat Now</button>
+        </div>
+        <a href="#" class="nav-item logout-item" onclick="handleLogout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+</aside>

@@ -1,0 +1,25 @@
+<!-- TOP NAVBAR -->
+<header class="topbar">
+    <div class="topbar-left">
+        <button class="hamburger" id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+        <div class="page-breadcrumb" id="page-breadcrumb">HOME PAGE</div>
+    </div>
+    <div class="topbar-right">
+        <button class="topbar-icon-btn" id="notif-btn" onclick="toggleNotif()">
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge">3</span>
+        </button>
+        <div class="user-chip" onclick="showPage('profile', document.getElementById('nav-profile'))" style="cursor:pointer;">
+            <div class="user-avatar" id="header-avatar">U</div>
+            <span id="header-username">User</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </div>
+    <!-- Notification Dropdown -->
+    <div class="notif-dropdown" id="notif-dropdown">
+        <div class="notif-header"><span>Notifications</span> <span class="notif-badge">3 new</span></div>
+        <div class="notif-item unread"><i class="fa-solid fa-clock"></i><div><strong>Paracetamol 500mg</strong><p>Due in 30 minutes — 08:00 AM</p></div></div>
+        <div class="notif-item unread"><i class="fa-solid fa-exclamation-triangle"></i><div><strong>Missed Dose</strong><p>Metformin 500mg — Yesterday 08:00 PM</p></div></div>
+        <div class="notif-item unread"><i class="fa-solid fa-circle-check"></i><div><strong>Refill Reminder</strong><p>Vitamin B12 — Only 5 tablets left</p></div></div>
+    </div>
+</header>

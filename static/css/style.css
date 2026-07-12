@@ -1,0 +1,10 @@
+/* ============================================================
+   static/css/style.css — Main Entry Stylesheet
+   Imports all modular stylesheets in dependency order.
+   ============================================================ */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('pages.css');

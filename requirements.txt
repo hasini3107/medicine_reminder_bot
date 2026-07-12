@@ -1,0 +1,10 @@
+flask>=3.0.0
+flask-cors>=4.0.0
+requests>=2.31.0
+ollama
+transformers>=4.40.0
+peft>=0.8.0
+torch>=2.2.0
+easyocr
+pdfplumber
+Pillow

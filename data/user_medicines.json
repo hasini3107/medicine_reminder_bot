@@ -1,0 +1,160 @@
+{
+  "guest": [
+    {
+      "name": "parcemtamol 500gm",
+      "generic": "",
+      "dosage": "1",
+      "when": "before food",
+      "uses": "pains",
+      "status": "Active",
+      "id": 1783660544716
+    },
+    {
+      "name": "Paracetamol (Calpol)",
+      "generic": "Paracetamol",
+      "dosage": "500mg-650mg",
+      "when": "After food",
+      "uses": "Fever and mild body pain",
+      "status": "Active",
+      "id": 1783660544717
+    },
+    {
+      "name": "Pantoprazole (Pan-40)",
+      "generic": "Pantoprazole",
+      "dosage": "40mg",
+      "when": "Before breakfast",
+      "uses": "GERD and acidity",
+      "status": "Active",
+      "id": 1783660544718
+    },
+    {
+      "name": "Cetirizine (Cetzine)",
+      "generic": "Cetirizine",
+      "dosage": "10mg",
+      "when": "At bedtime",
+      "uses": "Allergy symptoms",
+      "status": "Active",
+      "id": 1783660544719
+    },
+    {
+      "name": "Azithral 500",
+      "generic": "Azithromycin",
+      "dosage": "500 mg",
+      "when": "Before/after food as prescribed",
+      "uses": "Bacterial infection",
+      "status": "Active",
+      "id": 1783660544720
+    }
+  ],
+  "vasu@gmaim.com": [
+    {
+      "name": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "generic": "ALCOHOL",
+      "dosage": "\u2022 Wet hands thoroughly with product and allow to dry without wiping \u2022 For children under 6, do not without adult supervision \u2022Not recommended for infants.",
+      "when": null,
+      "uses": "\u2022 Hand sanitizer to help reduce bacteria on the skin that could cause disease \u2022 Recommended for repeated .",
+      "status": "Active",
+      "id": 1
+    }
+  ],
+  "bhavya.user@gmail.com": [
+    {
+      "name": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "generic": "ALCOHOL",
+      "dosage": "\u2022 Wet hands thoroughly with product and allow to dry without wiping \u2022 For children under 6, do not without adult supervision \u2022Not recommended for infants.",
+      "when": null,
+      "uses": "\u2022 Hand sanitizer to help reduce bacteria on the skin that could cause disease \u2022 Recommended for repeated .",
+      "status": "Active",
+      "id": 1
+    }
+  ],
+  "sree@gmail.com": [
+    {
+      "name": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "generic": "ALCOHOL",
+      "dosage": "\u2022 Wet hands thoroughly with product and allow to dry without wiping \u2022 For children under 6, do not without adult supervision \u2022Not recommended for infants.",
+      "when": null,
+      "uses": "\u2022 Hand sanitizer to help reduce bacteria on the skin that could cause disease \u2022 Recommended for repeated .",
+      "status": "Active",
+      "id": 1
+    }
+  ],
+  "kolamuribhavyasri@gmail.com": [
+    {
+      "dosage": "\u2022 Wet hands thoroughly with product and allow to dry without wiping \u2022 For children under 6, do not without adult supervision \u2022Not recommended for infants.",
+      "generic": "ALCOHOL",
+      "id": 1,
+      "name": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "status": "Active",
+      "uses": "\u2022 Hand sanitizer to help reduce bacteria on the skin that could cause disease \u2022 Recommended for repeated .",
+      "when": "before food"
+    },
+    {
+      "name": "Amoxicillin (Mox)",
+      "generic": "Amoxicillin",
+      "dosage": "250mg-500mg",
+      "when": "After meals",
+      "uses": "Bacterial infections",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "name": "Metformin (Glycomet)",
+      "generic": "Metformin",
+      "dosage": "500mg-1000mg",
+      "when": "With meals",
+      "uses": "Type 2 Diabetes",
+      "status": "Active",
+      "id": 3
+    },
+    {
+      "name": "Atorvastatin (Lipitor)",
+      "generic": "Atorvastatin",
+      "dosage": "10mg-40mg",
+      "when": "Bedtime",
+      "uses": "High cholesterol",
+      "status": "Active",
+      "id": 4
+    }
+  ],
+  "sree99@gmail.com": [
+    {
+      "name": "Amoxicillin (Mox)",
+      "generic": "Amoxicillin",
+      "dosage": "250mg-500mg",
+      "when": "After meals",
+      "uses": "Bacterial infections",
+      "status": "Active",
+      "id": 1
+    },
+    {
+      "name": "Metformin (Glycomet)",
+      "generic": "Metformin",
+      "dosage": "500mg-1000mg",
+      "when": "With meals",
+      "uses": "Type 2 Diabetes",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "name": "Atorvastatin (Lipitor)",
+      "generic": "Atorvastatin",
+      "dosage": "10mg-40mg",
+      "when": "Bedtime",
+      "uses": "High cholesterol",
+      "status": "Active",
+      "id": 3
+    }
+  ],
+  "hasiniunnamatla@gmail.com": [
+    {
+      "name": "paracetmol",
+      "generic": "",
+      "dosage": "1 tablet",
+      "when": "before food",
+      "uses": "fever",
+      "status": "Active",
+      "id": 1783836380022
+    }
+  ]
+}

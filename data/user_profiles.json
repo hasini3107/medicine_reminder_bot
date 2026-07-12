@@ -1,0 +1,110 @@
+{
+  "bhavya@gmail.com": {
+    "name": "Bhavya",
+    "email": "bhavya@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": ""
+  },
+  "guest": {
+    "name": "Bhavya User",
+    "age": "34",
+    "email": "bhavya@gmail.com",
+    "phone": "+91 98765 43210",
+    "blood": "O+",
+    "doctor": "Dr. Ramesh Kumar",
+    "conditions": "Diabetes, Hypertension",
+    "allergies": "Penicillin"
+  },
+  "vasu@gmail.com": {
+    "name": "alina grace",
+    "email": "vasu@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$2bc3f0e1ec50a5aa10b057ddd8466297$7668249bfe72614f696b4ccacd2e248d4d4bf01599f88832684e0c9db9209c3a"
+  },
+  "vasu@gmaim.com": {
+    "name": "Vasu",
+    "email": "vasu@gmaim.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$091453a2e1b358a35fa641abe3ea4c4f$d896156a14a8626d7fffcbc433221af0b9bb4943c29868fc6ffded2b88d06801"
+  },
+  "google.user@gmail.com": {
+    "name": "Google Demo User",
+    "email": "google.user@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$2b66d4f75b1d8593d13967208b5e9183$edaf299022774bb586877bb19e403baf828bf88765473147f62d60bb010e76fb"
+  },
+  "bhavya.user@gmail.com": {
+    "name": "Bhavya User",
+    "email": "bhavya.user@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$90524259ac4a0d5f93c78e17136b33dd$b7629b76c9da8846bf89bb57b3c1692d3a75bbf6a9dfe000b486e7ecfef20029"
+  },
+  "sree@gmail.com": {
+    "name": "bhavya sri",
+    "email": "sree@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$f9e7c6ae7d8bd36333e323b9afe5290d$d5e513bd65bffd87966458d180496296211f8cf76e7005e7b5c4ec80de890f52"
+  },
+  "kolamuribhavyasri@gmail.com": {
+    "name": "Bhavya Sri.K",
+    "age": "21",
+    "email": "kolamuribhavyasri@gmail.com",
+    "phone": "1596783469",
+    "blood": "O+",
+    "doctor": "Dr. Ramesh Kumar",
+    "conditions": "Diabetes, Hypertension",
+    "allergies": "Penicillin",
+    "password_hash": "pbkdf2_sha256$200000$330b3e181f3ea10aa70be8760f03953f$4831ffee53b70c0c11942ca30a7d8a63a6f6f2f28c10b6249d35a1448b3fa07b"
+  },
+  "sree99@gmail.com": {
+    "name": "sree bhavya",
+    "age": "21",
+    "email": "sree99@gmail.com",
+    "phone": "6734981152",
+    "blood": "B+",
+    "doctor": "Dr. Ramesh Kumar",
+    "conditions": "Diabetes, Hypertension",
+    "allergies": "Penicillin",
+    "password_hash": "pbkdf2_sha256$200000$86c3173f71a2db76189f509944b61a9c$431724fdb8b10de0c8a5fcea9d04cced3e502f65f65695da6149c3199f62d78a"
+  },
+  "hasiniunnamatla@gmail.com": {
+    "name": "Hasiniunnamatla",
+    "email": "hasiniunnamatla@gmail.com",
+    "age": "",
+    "phone": "",
+    "blood": "B+",
+    "doctor": "",
+    "conditions": "",
+    "allergies": "",
+    "password_hash": "pbkdf2_sha256$200000$9726601e2b567a034e06da89e2061828$aa0f277cf5d36e9907f9dc30f964673d91a71ea7a2605912de02ff259d4e76fb"
+  }
+}

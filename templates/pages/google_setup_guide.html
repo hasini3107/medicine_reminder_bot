@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In Setup — MediAssist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #f0f4ff;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .instructions {
+            background: var(--primary-light);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .instructions h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .step-list {
+            list-style: none;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .step-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .code-box {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 6px 0;
+            word-break: break-all;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .form-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+        }
+
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #3651d4;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg);
+            color: var(--text-primary);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0f172a;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <div class="logo-icon"><i class="fa-brands fa-google"></i></div>
+            <h1 class="title">Configure Google Sign-In</h1>
+            <p class="subtitle">Please configure your Google OAuth Client ID in <code>config.py</code> to redirect users to Google's official login screen.</p>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Setup Steps</h3>
+            <ul class="step-list">
+                <li>Go to the <a href="https://console.cloud.google.com/" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none;">Google Cloud Console</a>.</li>
+                <li>Navigate to <strong>APIs & Services</strong> &gt; <strong>Credentials</strong>.</li>
+                <li>Click <strong>Create Credentials</strong> &gt; <strong>OAuth client ID</strong>.</li>
+                <li>Set Application Type to <strong>Web application</strong>.</li>
+                <li>Add the following URL to <strong>Authorized redirect URIs</strong>:
+                    <div class="code-box" id="redirect-url-box">http://127.0.0.1:5000/api/auth/google/callback</div>
+                </li>
+                <li>Copy the Client ID and Secret and paste them into your <code>config.py</code>.</li>
+            </ul>
+        </div>
+
+        <!-- Temporary Config Tester Form -->
+        <form id="temp-config-form" onsubmit="saveAndRedirect(event)">
+            <div class="form-group">
+                <label class="form-label" for="client-id">Temporary Client ID</label>
+                <input type="text" id="client-id" class="form-input" placeholder="paste client id here..." required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="client-secret">Temporary Client Secret</label>
+                <input type="password" id="client-secret" class="form-input" placeholder="paste client secret here..." required>
+            </div>
+            
+            <div class="btn-stack">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Save & Redirect to Google Sign-In</span>
+                </button>
+                <button type="button" class="btn btn-secondary" onclick="simulateGoogleLogin()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Use Mock Account Chooser (Demo Mode)</span>
+                </button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='/login'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Login</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Update redirect URI box with current host
+        document.getElementById('redirect-url-box').textContent = window.location.origin + '/api/auth/google/callback';
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        async function saveAndRedirect(e) {
+            e.preventDefault();
+            const clientId = document.getElementById('client-id').value.trim();
+            const clientSecret = document.getElementById('client-secret').value.trim();
+
+            showToast('💾 Saving credentials...');
+            
+            try {
+                const response = await fetch('/api/auth/google/save-config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ client_id: clientId, client_secret: clientSecret })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showToast('✅ Configuration saved! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = '/api/auth/google/login';
+                    }, 1000);
+                } else {
+                    alert('Failed to save config: ' + data.message);
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Connection error');
+            }
+        }
+
+        function simulateGoogleLogin() {
+            showToast('🎭 Launching Mock Account Chooser...');
+            setTimeout(() => {
+                window.location.href = '/mock-google-login';
+            }, 800);
+        }
+    </script>
+</body>
+</html>

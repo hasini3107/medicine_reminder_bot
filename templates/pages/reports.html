@@ -1,0 +1,27 @@
+<!-- ===== REPORTS PAGE ===== -->
+<section class="page" id="page-reports">
+    <div class="page-title-row">
+        <div>
+            <h1 class="page-h1">Reports</h1>
+            <p class="page-sub">Your health and medicine adherence reports</p>
+        </div>
+        <button class="primary-btn" id="export-report-btn" onclick="exportReport()"><i class="fa-solid fa-download"></i> Export Report</button>
+    </div>
+
+    <div class="reports-grid">
+        <div class="card upload-card">
+            <h3>Upload Prescription</h3>
+            <div class="upload-area" id="upload-area" ondragover="event.preventDefault()" ondrop="handleDrop(event)" onclick="document.getElementById('file-input').click()">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Drag & drop or click to upload</p>
+                <small>Supports PNG, JPG, PDF</small>
+                <input type="file" id="file-input" accept=".png,.jpg,.jpeg,.pdf" style="display:none" onchange="handleFileUpload(event)">
+            </div>
+            <div id="upload-preview"></div>
+        </div>
+        <div class="card">
+            <h3>Recent Uploads</h3>
+            <div id="reports-list" style="padding:8px 12px;"></div>
+        </div>
+    </div>
+</section>

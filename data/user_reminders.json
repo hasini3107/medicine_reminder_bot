@@ -1,0 +1,114 @@
+{
+  "guest": [
+    {
+      "done": false,
+      "freq": "As Needed",
+      "id": 1783660579669,
+      "medId": 1783660544716,
+      "medName": "parcemtamol 500gm",
+      "note": "before lunch",
+      "time": "11:45"
+    }
+  ],
+  "vasu@gmaim.com": [
+    {
+      "done": false,
+      "id": 1,
+      "medId": 1,
+      "medName": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "notes": "Auto-created reminder from prescription upload",
+      "time": "09:00"
+    }
+  ],
+  "bhavya.user@gmail.com": [
+    {
+      "id": 1,
+      "medId": 1,
+      "medName": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    }
+  ],
+  "sree@gmail.com": [
+    {
+      "id": 1,
+      "medId": 1,
+      "medName": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    }
+  ],
+  "kolamuribhavyasri@gmail.com": [
+    {
+      "done": false,
+      "id": 1,
+      "medId": 1,
+      "medName": "Ashley Belle Moisturizing Hand Sanitizer Sunset Amber",
+      "notes": "Auto-created reminder from prescription upload",
+      "time": "09:00"
+    },
+    {
+      "id": 2,
+      "medId": 2,
+      "medName": "Amoxicillin (Mox)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    },
+    {
+      "id": 3,
+      "medId": 3,
+      "medName": "Metformin (Glycomet)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    },
+    {
+      "id": 4,
+      "medId": 4,
+      "medName": "Atorvastatin (Lipitor)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    }
+  ],
+  "sree99@gmail.com": [
+    {
+      "id": 1,
+      "medId": 1,
+      "medName": "Amoxicillin (Mox)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    },
+    {
+      "id": 2,
+      "medId": 2,
+      "medName": "Metformin (Glycomet)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    },
+    {
+      "id": 3,
+      "medId": 3,
+      "medName": "Atorvastatin (Lipitor)",
+      "time": "09:00",
+      "done": false,
+      "notes": "Auto-created reminder from prescription upload"
+    }
+  ],
+  "hasiniunnamatla@gmail.com": [
+    {
+      "id": 1783836418771,
+      "medId": 1783836380022,
+      "medName": "paracetmol",
+      "time": "11:37",
+      "freq": "Daily",
+      "note": "before lunch",
+      "done": false
+    }
+  ]
+}

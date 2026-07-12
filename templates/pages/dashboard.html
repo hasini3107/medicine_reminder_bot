@@ -1,0 +1,140 @@
+<!-- ===== DASHBOARD PAGE ===== -->
+<section class="page active" id="page-dashboard">
+    <div class="welcome-bar">
+        <div>
+            <h1 class="welcome-title" id="welcome-title">Hi there! 👋</h1>
+            <p class="welcome-sub">Take care of your health. We're here to help you.</p>
+        </div>
+        <div class="welcome-date" id="dashboard-date"></div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-grid">
+        <div class="stat-card blue">
+            <div class="stat-icon"><i class="fa-solid fa-capsules"></i></div>
+            <div class="stat-info">
+                <div class="stat-num" id="stat-total">0</div>
+                <div class="stat-label">Total Medicines</div>
+                <div class="stat-sub">Active Medicines</div>
+            </div>
+        </div>
+        <div class="stat-card green">
+            <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="stat-info">
+                <div class="stat-num" id="stat-taken">0</div>
+                <div class="stat-label">Taken Today</div>
+                <div class="stat-sub">Doses</div>
+            </div>
+        </div>
+        <div class="stat-card orange">
+            <div class="stat-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+            <div class="stat-info">
+                <div class="stat-num" id="stat-pending">0</div>
+                <div class="stat-label">Pending</div>
+                <div class="stat-sub">Doses</div>
+            </div>
+        </div>
+        <div class="stat-card red">
+            <div class="stat-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="stat-info">
+                <div class="stat-num" id="stat-missed">0</div>
+                <div class="stat-label">Missed</div>
+                <div class="stat-sub">Doses</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Row -->
+    <div class="dashboard-mid">
+
+        <!-- Today's Schedule -->
+        <div class="card schedule-card">
+            <div class="card-header">
+                <h2>Today's Schedule</h2>
+                <a href="#" class="view-all" onclick="showPage('reminders', document.getElementById('nav-reminders'))">View All</a>
+            </div>
+            <div class="schedule-list" id="schedule-list">
+                <!-- Filled by JS -->
+            </div>
+            <div class="next-reminder-banner" id="next-reminder-banner">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <span class="next-label">Next Reminder</span>
+                    <span class="next-med" id="next-med-name">—</span>
+                </div>
+                <span class="next-time" id="next-med-time">—</span>
+                <button onclick="showPage('reminders', document.getElementById('nav-reminders'))">View Reminders</button>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="dashboard-right-col">
+
+            <!-- Medicine Intake Overview -->
+            <div class="card intake-card">
+                <div class="card-header">
+                    <h2>Medicine Intake Overview</h2>
+                    <select class="mini-select" id="overview-period" onchange="updateChart()">
+                        <option>This Week</option>
+                        <option>This Month</option>
+                    </select>
+                </div>
+                <div class="intake-body">
+                    <div class="donut-wrap">
+                        <canvas id="intakeDonut" width="130" height="130"></canvas>
+                        <div class="donut-center">
+                            <span id="donut-pct">0%</span>
+                            <small>Adherence</small>
+                        </div>
+                    </div>
+                    <div class="intake-legend">
+                        <div class="legend-item"><span class="dot taken-dot"></span> Taken <strong id="leg-taken">0 (0%)</strong></div>
+                        <div class="legend-item"><span class="dot pending-dot"></span> Pending <strong id="leg-pending">0 (0%)</strong></div>
+                        <div class="legend-item"><span class="dot missed-dot"></span> Missed <strong id="leg-missed">0 (0%)</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ask Bot -->
+            <div class="card ask-bot-card">
+                <div class="ask-bot-text">
+                    <h3>Ask Medicine Assistant</h3>
+                    <p>Ask me questions about your medicines, dosages, side effects, precautions, and reminders.</p>
+                    <button class="chat-bot-btn" onclick="showPage('chatbot', document.getElementById('nav-chatbot'))"><i class="fa-solid fa-robot"></i> Chat with Assistant</button>
+                </div>
+                <div class="ask-bot-img">
+                    <div class="bot-avatar-big"><i class="fa-solid fa-robot"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card quick-card">
+        <h2 style="margin-bottom:16px;">Quick Actions</h2>
+        <div class="quick-grid">
+            <div class="quick-item" onclick="showPage('medicines', document.getElementById('nav-medicines')); setTimeout(openAddMedModal, 100)">
+                <div class="quick-icon q-green"><i class="fa-solid fa-plus"></i></div>
+                <span>Add Medicine</span>
+                <small>Add new medicine</small>
+            </div>
+            <div class="quick-item" onclick="showPage('reminders', document.getElementById('nav-reminders')); setTimeout(openAddReminderModal, 100)">
+                <div class="quick-icon q-blue"><i class="fa-solid fa-bell"></i></div>
+                <span>Set Reminder</span>
+                <small>Set medicine reminder</small>
+            </div>
+            <div class="quick-item" onclick="showPage('reports', document.getElementById('nav-reports'))">
+                <div class="quick-icon q-orange"><i class="fa-solid fa-upload"></i></div>
+                <span>Upload Prescription</span>
+                <small>Upload and save</small>
+            </div>
+            <div class="quick-item" onclick="showPage('reports', document.getElementById('nav-reports'))">
+                <div class="quick-icon q-purple"><i class="fa-solid fa-chart-bar"></i></div>
+                <span>View Reports</span>
+                <small>Check your health</small>
+            </div>
+        </div>
+    </div>
+</section>
+

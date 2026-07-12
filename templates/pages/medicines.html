@@ -1,0 +1,87 @@
+<!-- ===== MY MEDICINES PAGE ===== -->
+<section class="page" id="page-medicines">
+    <div class="page-title-row">
+        <div>
+            <h1 class="page-h1">My Medicines</h1>
+            <p class="page-sub">Manage your medicine list</p>
+        </div>
+        <button class="primary-btn" onclick="openAddMedModal()"><i class="fa-solid fa-plus"></i> Add Medicine</button>
+    </div>
+
+    <div class="card">
+        <div class="table-toolbar">
+            <input type="text" id="med-search" placeholder="🔍  Search medicines..." oninput="filterMedicines()" class="search-input">
+            <select class="mini-select" id="med-filter" onchange="filterMedicines()">
+                <option value="">All Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
+        <div class="table-wrap">
+            <table class="med-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Medicine Name</th>
+                        <th>Generic Name</th>
+                        <th>Dosage</th>
+                        <th>When to Take</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="med-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add/Edit Medicine Modal -->
+    <div class="modal-overlay" id="med-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Add Medicine</h3>
+                <button class="modal-close" onclick="closeModal('med-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Medicine Name *</label>
+                        <input type="text" id="form-med-name" placeholder="e.g. Paracetamol 500mg">
+                    </div>
+                    <div class="form-group">
+                        <label>Generic Name</label>
+                        <input type="text" id="form-generic" placeholder="e.g. Acetaminophen">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Dosage</label>
+                        <input type="text" id="form-dosage" placeholder="e.g. 1 Tablet">
+                    </div>
+                    <div class="form-group">
+                        <label>When to Take</label>
+                        <input type="text" id="form-when" placeholder="e.g. After Food">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Uses</label>
+                        <input type="text" id="form-uses" placeholder="e.g. Fever, Pain relief">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="form-status">
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-btn" onclick="closeModal('med-modal')">Cancel</button>
+                <button class="primary-btn" onclick="saveMedicine()">Save Medicine</button>
+            </div>
+        </div>
+    </div>
+</section>

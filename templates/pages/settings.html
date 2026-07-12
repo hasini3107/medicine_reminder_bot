@@ -1,0 +1,48 @@
+<!-- ===== SETTINGS PAGE ===== -->
+<section class="page" id="page-settings">
+    <div class="page-title-row">
+        <div>
+            <h1 class="page-h1">Settings</h1>
+            <p class="page-sub">Configure your MediAssist preferences</p>
+        </div>
+    </div>
+    <div class="settings-layout">
+        <div class="card">
+            <h3>Notifications</h3>
+            <div class="setting-item">
+                <div><strong>Medicine Reminders</strong><p>Get notified when it's time to take medicine</p></div>
+                <label class="toggle"><input type="checkbox" checked><span class="slider"></span></label>
+            </div>
+            <div class="setting-item">
+                <div><strong>Missed Dose Alert</strong><p>Alert if a dose was missed</p></div>
+                <label class="toggle"><input type="checkbox" checked><span class="slider"></span></label>
+            </div>
+            <div class="setting-item">
+                <div><strong>Refill Reminder</strong><p>Remind when medicine quantity is low</p></div>
+                <label class="toggle"><input type="checkbox"><span class="slider"></span></label>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Appearance</h3>
+            <div class="setting-item">
+                <div><strong>Dark Mode</strong><p>Switch to dark theme</p></div>
+                <label class="toggle"><input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()"><span class="slider"></span></label>
+            </div>
+            <div class="setting-item">
+                <div><strong>Compact View</strong><p>Show more content in less space</p></div>
+                <label class="toggle"><input type="checkbox"><span class="slider"></span></label>
+            </div>
+        </div>
+        <div class="card">
+            <h3>AI Bot Settings</h3>
+            <div class="setting-item">
+                <div><strong>AI Model</strong><p>Current model: Qwen 2.5 via Ollama</p></div>
+                <span class="badge-chip blue">Active</span>
+            </div>
+            <div class="setting-item">
+                <div><strong>Response Language</strong><p>Select preferred language</p></div>
+                <select class="mini-select"><option>English</option><option>Hindi</option><option>Tamil</option></select>
+            </div>
+        </div>
+    </div>
+</section>

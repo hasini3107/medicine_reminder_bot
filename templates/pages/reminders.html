@@ -1,0 +1,67 @@
+<!-- ===== REMINDERS PAGE ===== -->
+<section class="page" id="page-reminders">
+    <div class="page-title-row">
+        <div>
+            <h1 class="page-h1">Reminders</h1>
+            <p class="page-sub">Set and manage your medicine reminders</p>
+        </div>
+        <button class="primary-btn" onclick="openAddReminderModal()"><i class="fa-solid fa-plus"></i> Add Reminder</button>
+    </div>
+
+    <div class="reminders-layout">
+        <div class="card" style="flex:1">
+            <h3 style="margin-bottom:16px;color:var(--text-primary)">Today's Reminders</h3>
+            <div id="reminder-list-display"></div>
+        </div>
+        <div class="card reminder-tip-card">
+            <div class="tip-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Reminder Tips</h3>
+            <ul class="tip-list">
+                <li><i class="fa-solid fa-check"></i> Set reminders at consistent times</li>
+                <li><i class="fa-solid fa-check"></i> Use alarm for critical medicines</li>
+                <li><i class="fa-solid fa-check"></i> Mark as taken immediately</li>
+                <li><i class="fa-solid fa-check"></i> Keep medicines visible</li>
+                <li><i class="fa-solid fa-check"></i> Never skip without doctor advice</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Add Reminder Modal -->
+    <div class="modal-overlay" id="reminder-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Reminder</h3>
+                <button class="modal-close" onclick="closeModal('reminder-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Medicine</label>
+                    <select id="reminder-med-select"></select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" id="reminder-time">
+                    </div>
+                    <div class="form-group">
+                        <label>Frequency</label>
+                        <select id="reminder-freq">
+                            <option>Daily</option>
+                            <option>Twice Daily</option>
+                            <option>Weekly</option>
+                            <option>As Needed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Note</label>
+                    <input type="text" id="reminder-note" placeholder="e.g. Take after breakfast">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-btn" onclick="closeModal('reminder-modal')">Cancel</button>
+                <button class="primary-btn" onclick="saveReminder()">Save Reminder</button>
+            </div>
+        </div>
+    </div>
+</section>

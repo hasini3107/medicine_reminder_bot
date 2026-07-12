@@ -1,0 +1,58 @@
+<!-- ===== CHATBOT PAGE ===== -->
+<section class="page" id="page-chatbot">
+    <div class="page-title-row">
+        <div>
+            <h1 class="page-h1"><i class="fa-solid fa-robot" style="color:var(--primary)"></i> MediAssist Assistant</h1>
+            <p class="page-sub">Ask about medicines, dosages, side effects, precautions, or reminders.</p>
+        </div>
+        <button class="secondary-btn" onclick="clearChat()"><i class="fa-solid fa-trash"></i> Clear Chat</button>
+    </div>
+
+    <div class="chatbot-layout">
+        <div class="card chat-card">
+            <div class="chat-box" id="chat-box">
+                <div class="bot-msg-wrap">
+                    <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bot-message">
+                        <strong>MediAssist Assistant</strong>
+                        <p id="chat-intro-text">👋 Hello! I'm your personal medicine assistant.<br><br>
+                        Ask me about any medicine — dosage, uses, side effects, precautions, or reminders. I'm here to help!</p>
+                        <div class="msg-time" id="init-time"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-suggestions" id="chat-suggestions">
+                <span class="suggestion-chip" onclick="useSuggestion(this)">What is Paracetamol used for?</span>
+                <span class="suggestion-chip" onclick="useSuggestion(this)">Side effects of Metformin</span>
+                <span class="suggestion-chip" onclick="useSuggestion(this)">Dosage of Vitamin B12</span>
+                <span class="suggestion-chip" onclick="useSuggestion(this)">When to take Aspirin?</span>
+            </div>
+            <div class="chat-input-area">
+                <button class="mic-btn" id="mic-btn" onclick="toggleMic()" title="Voice input"><i class="fa-solid fa-microphone"></i></button>
+                <input type="text" id="user-input" placeholder="Ask about any medicine..." autocomplete="off">
+                <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Chat sidebar info -->
+        <div class="chat-info-col">
+            <div class="card">
+                <h3 style="margin-bottom:14px;color:var(--text-primary)"><i class="fa-solid fa-circle-info" style="color:var(--primary)"></i> What I can help with</h3>
+                <ul class="help-list">
+                    <li><i class="fa-solid fa-capsules"></i> Medicine information</li>
+                    <li><i class="fa-solid fa-syringe"></i> Dosage guidance</li>
+                    <li><i class="fa-solid fa-triangle-exclamation"></i> Side effects</li>
+                    <li><i class="fa-solid fa-shield-halved"></i> Precautions & safety</li>
+                    <li><i class="fa-solid fa-clock"></i> When to take medicines</li>
+                    <li><i class="fa-solid fa-stethoscope"></i> General health queries</li>
+                </ul>
+            </div>
+            <div class="card" style="margin-top:16px;">
+                <h3 style="margin-bottom:12px;color:var(--text-primary)">Recent Queries</h3>
+                <div id="recent-queries">
+                    <p style="color:var(--text-muted);font-size:13px;">No recent queries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

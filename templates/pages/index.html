@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAssist - Medicine Reminder & AI Bot</title>
+    <meta name="description" content="MediAssist - Your smart medicine reminder and AI-powered health assistant. Track medicines, set reminders, and get instant answers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    {% include 'includes/sidebar.html' %}
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrapper">
+
+        <!-- TOP NAVBAR -->
+        {% include 'includes/header.html' %}
+
+        <!-- PAGES -->
+        <main class="main-content">
+            {% include 'pages/dashboard.html' %}
+            {% include 'pages/medicines.html' %}
+            {% include 'pages/reminders.html' %}
+            {% include 'pages/chatbot.html' %}
+            {% include 'pages/reports.html' %}
+            {% include 'pages/profile.html' %}
+            {% include 'pages/settings.html' %}
+        </main>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/medicines.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/reminders.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/reports.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
